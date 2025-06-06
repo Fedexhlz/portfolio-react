@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from '../components/Header';
-import MainHome from '../components/MainHome';
+import MainAboutMe from '../components/MainAboutMe';
 import Footer from '../components/Footer';
 
-const Home = () => {
+const AboutMe = () => {
   return (
     <div>
       <Header />
-      <MainHome />
+      <MainAboutMe />
       <Footer />
     </div>
   );
 };
 
-export default Home;
+export default AboutMe;

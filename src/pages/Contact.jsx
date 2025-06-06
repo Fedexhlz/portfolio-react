@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from '../components/Header';
-import MainHome from '../components/MainHome';
+import MainContact from '../components/MainContact';
 import Footer from '../components/Footer';
 
-const Home = () => {
+const Contact = () => {
   return (
     <div>
       <Header />
-      <MainHome />
+      <MainContact />
       <Footer />
     </div>
   );
 };
 
-export default Home;
+export default Contact;
