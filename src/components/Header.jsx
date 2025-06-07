@@ -5,7 +5,11 @@ import { FaHome, FaUser, FaFolderOpen, FaEnvelope } from 'react-icons/fa';
 const Header = () => {
   return (
     <div className='bg-gray-900 text-white px-6 py-4 flex justify-between items-center shadow-md'>
-      <h1 className='text-lg font-semibold italic'>Federico Herrera {'</>'}</h1>
+      <Link to='/' title='Inicio' className='hover:text-blue-400 transition'>
+        <h1 className='text-lg font-semibold italic'>
+          Federico Herrera {'</>'}
+        </h1>
+      </Link>
       <nav className='flex gap-6 text-xl'>
         <Link to='/' title='Inicio' className='hover:text-blue-400 transition'>
           <FaHome />
