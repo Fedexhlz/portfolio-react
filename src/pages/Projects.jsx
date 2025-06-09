@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const Projects = () => {
   return (
-    <div>
+    <div className='flex flex-col min-h-screen'>
       <Header />
       <MainProjects />
       <Footer />
