@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from '../components/Header';
-import MainAboutMe from '../components/MainAboutMe';
 import Footer from '../components/Footer';
+import MainAboutMe from '../components/MainAboutMe';
 
 const AboutMe = () => {
   return (
-    <div>
+    <div className='flex flex-col min-h-screen'>
       <Header />
       <MainAboutMe />
       <Footer />

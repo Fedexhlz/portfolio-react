@@ -4,18 +4,10 @@ import { Link } from 'react-router-dom';
 const MainHome = () => {
   return (
     <div className='flex flex-1 flex-col justify-center items-center text-white bg-gray-800 text-center px-4 py-20'>
-      {/* <h2 className='text-4xl sm:text-5xl font-bold mb-4'>
-        ¡Hola Mundo! Soy <span className='text-sky-600'>Federico</span>
-      </h2>
-      <p className='text-lg sm:text-xl text-gray-300 max-w-xl'>
-        <span className='text-sky-600'>Desarrollador Full Stack</span> en
-        formación.
-      </p>
-      <p className='text-lg sm:text-xl text-gray-300 max-w-xl mb-6'>Transformando ideas en código y desafíos en oportunidades.</p> */}
       <h2 className='text-4xl sm:text-5xl font-bold mb-4'>
         <span className='text-purple-600'>console</span>.
         <span className='text-lime-500'>log</span>(
-        <span className='text-sky-500'>"Hola, soy Federico"</span>);
+        <span className='text-sky-500'>"Federico Herrera"</span>);
       </h2>
       <p className='text-lg sm:text-xl text-gray-300 max-w-xl'>
         Estudiante de <span className='italic'>Programación</span> de la{' '}
