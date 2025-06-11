@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  aboutMeDescription,
-  aboutMeImage,
-  devSkills,
-} from '../constants/aboutMe';
+import { aboutMeData } from '../constants/aboutMe';
 
 const MainAboutMe = () => {
   return (
@@ -13,12 +9,12 @@ const MainAboutMe = () => {
           <div className='md:col-span-2 text-left'>
             <h2 className='text-3xl font-bold text-sky-400 mb-6'>Sobre mí</h2>
             <p className='text-lg text-gray-300 leading-relaxed'>
-              {aboutMeDescription}
+              {aboutMeData.description}
             </p>
           </div>
           <div className='flex justify-center'>
             <img
-              src={aboutMeImage}
+              src={aboutMeData.image}
               alt='Foto de perfil'
               className='w-48 h-48 object-cover rounded-full border-4 border-gray-700 duration-300 hover:scale-180'
             />
@@ -30,7 +26,7 @@ const MainAboutMe = () => {
             Habilidades
           </h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-            {devSkills.map((skill, i) => (
+            {aboutMeData.devSkills.map((skill, i) => (
               <div
                 key={i}
                 className='bg-gray-700 p-4 rounded-lg flex flex-col sm:flex-row items-center gap-2 duration-300 hover:scale-105 hover:shadow-lg hover:shadow-sky-500/40'

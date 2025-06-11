@@ -1,17 +1,17 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { projectList } from '../constants/projects';
+import { projectData } from '../constants/projects';
 
 const MainProjects = () => {
   return (
     <div className='flex flex-1 flex-col justify-center items-center text-white bg-gray-800 px-4 py-20'>
       <div className='w-full max-w-6xl'>
         <h2 className='text-3xl font-bold text-sky-400 mb-10 text-left'>
-          Proyectos
+          Mis Proyectos
         </h2>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
-          {projectList.map((project, i) => (
+          {projectData.map((project, i) => (
             <div
               key={i}
               className='relative group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300'
