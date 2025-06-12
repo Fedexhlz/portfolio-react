@@ -10,7 +10,7 @@ const Header = () => {
           Federico Herrera {'</>'}
         </h1>
       </Link>
-      <nav className='flex gap-6 text-xl'>
+      <div className='flex gap-6 text-xl'>
         <Link to='/' title='Inicio' className='hover:text-blue-400 transition'>
           <FaHome />
         </Link>
@@ -35,7 +35,7 @@ const Header = () => {
         >
           <FaEnvelope />
         </Link>
-      </nav>
+      </div>
     </div>
   );
 };
