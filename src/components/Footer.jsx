@@ -1,9 +1,17 @@
 import React from 'react';
+import { themeStore } from '../store/themeStore';
 import { FaGithub, FaLinkedin, FaRegCopyright } from 'react-icons/fa';
 
 const Footer = () => {
+  const { theme } = themeStore();
   return (
-    <div className='bg-gray-900 text-white py-4'>
+    <div
+      className={`${
+        theme
+          ? 'bg-gray-900 text-white'
+          : 'bg-white text-gray-900 border-t border-gray-200'
+      } py-4`}
+    >
       <div className='flex flex-col md:flex-row justify-center items-center gap-2 text-sm text-center'>
         <span className='flex items-center gap-1'>
           <FaRegCopyright />
@@ -32,7 +40,11 @@ const Footer = () => {
         </span>
       </div>
 
-      <div className='mt-2 text-center text-xs text-gray-400'>
+      <div
+        className={`mt-2 text-center text-xs ${
+          theme ? 'text-gray-400' : 'text-gray-600'
+        }`}
+      >
         Hecho con{' '}
         <a
           href='https://es.react.dev/'

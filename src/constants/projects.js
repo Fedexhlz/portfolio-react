@@ -1,4 +1,4 @@
-export const projectData = [
+export const projectsData = [
   {
     projectName: 'Despues pongo un titulo',
     projectImage: '/src/assets/projects/1.jpg',

@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { contactData } from '../constants/contact';
+import { themeStore } from '../store/themeStore';
 import { FaEnvelope, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
 
 const MainContact = () => {
+  const { theme } = themeStore();
+
   const [contactForm, setContactForm] = useState({
     name: '',
     email: '',
@@ -37,12 +40,20 @@ const MainContact = () => {
   };
 
   return (
-    <div className='flex flex-1 flex-col justify-center items-center text-white bg-gray-800 px-4 py-20'>
+    <div
+      className={`flex flex-1 flex-col justify-center items-center px-4 py-20 ${
+        theme ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-900'
+      }`}
+    >
       <div className='w-full max-w-2xl'>
         <h2 className='text-3xl font-bold text-sky-400 mb-6 text-left'>
           Contactame
         </h2>
-        <p className='text-gray-300 mb-10 text-left'>
+        <p
+          className={`${
+            theme ? 'text-gray-300' : 'text-gray-700'
+          } mb-10 text-left`}
+        >
           {contactData.contactMessage}
         </p>
 
@@ -57,7 +68,11 @@ const MainContact = () => {
                 [e.target.name]: e.target.value,
               })
             }
-            className='bg-gray-700 text-white placeholder-gray-400 placeholder:italic px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-sky-400'
+            className={`${
+              theme
+                ? 'bg-gray-700 text-white'
+                : 'bg-white text-gray-900 border border-gray-300'
+            } placeholder-gray-400 placeholder:italic px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-sky-400`}
             required
           />
           <input
@@ -70,7 +85,11 @@ const MainContact = () => {
                 [e.target.name]: e.target.value,
               })
             }
-            className='bg-gray-700 text-white placeholder-gray-400 placeholder:italic px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-sky-400'
+            className={`${
+              theme
+                ? 'bg-gray-700 text-white'
+                : 'bg-white text-gray-900 border border-gray-300'
+            } placeholder-gray-400 placeholder:italic px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-sky-400`}
             required
           />
           <textarea
@@ -83,19 +102,33 @@ const MainContact = () => {
                 [e.target.name]: e.target.value,
               })
             }
-            className='bg-gray-700 text-white placeholder-gray-400 placeholder:italic px-4 py-3 rounded resize-none focus:outline-none focus:ring-2 focus:ring-sky-400'
+            className={`${
+              theme
+                ? 'bg-gray-700 text-white'
+                : 'bg-white text-gray-900 border border-gray-300'
+            } placeholder-gray-400 placeholder:italic px-4 py-3 rounded resize-none focus:outline-none focus:ring-2 focus:ring-sky-400`}
             required
           ></textarea>
 
           <button
             type='submit'
-            className='bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded transition'
+            className={`${
+              theme
+                ? 'bg-gray-700 hover:bg-gray-600'
+                : 'bg-white hover:bg-gray-200 border border-gray-300'
+            } text-${
+              theme ? 'white' : 'gray-900'
+            } px-6 py-2 rounded transition`}
           >
             {formSent ? 'Mensaje enviado' : 'Enviar mensaje'}
           </button>
         </form>
 
-        <div className='flex flex-col sm:flex-row justify-around items-start sm:items-center gap-4 text-sm text-gray-300'>
+        <div
+          className={`flex flex-col sm:flex-row justify-around items-start sm:items-center gap-4 text-sm ${
+            theme ? 'text-gray-300' : 'text-gray-700'
+          }`}
+        >
           <div
             className='flex items-center gap-2 cursor-pointer'
             onClick={() => handleCopyToClipboard(contactData.email, 'email')}

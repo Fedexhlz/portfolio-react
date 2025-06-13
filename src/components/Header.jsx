@@ -1,13 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaUser, FaFolderOpen, FaEnvelope } from 'react-icons/fa';
+import { themeStore } from '../store/themeStore';
+import {
+  FaHome,
+  FaUser,
+  FaFolderOpen,
+  FaEnvelope,
+  FaLightbulb,
+  FaRegLightbulb,
+} from 'react-icons/fa';
 
 const Header = () => {
+  const { theme, setTheme } = themeStore();
+
   return (
-    <div className='bg-gray-900 text-white px-6 py-4 flex justify-between items-center shadow-md'>
+    <div
+      className={`px-6 py-4 flex justify-between items-center shadow-md ${
+        theme
+          ? 'bg-gray-900 text-white'
+          : 'bg-white text-gray-900 border-b border-gray-200'
+      }`}
+    >
       <Link to='/' title='Inicio' className='hover:text-blue-400 transition'>
         <h1 className='text-lg font-semibold italic'>
-          Federico Herrera {'</>'}
+          Federico Herrera {theme ? '</>' : '{ }'}
         </h1>
       </Link>
       <div className='flex gap-6 text-xl'>
@@ -35,6 +51,14 @@ const Header = () => {
         >
           <FaEnvelope />
         </Link>
+        <div className='border-l border-gray-600'></div>
+        <button
+          onClick={setTheme}
+          title={theme ? 'Enciende la luz' : 'Apaga la luz'}
+          className='cursor-pointer hover:text-blue-500 transition'
+        >
+          {theme ? <FaRegLightbulb /> : <FaLightbulb />}
+        </button>
       </div>
     </div>
   );
