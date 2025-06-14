@@ -34,4 +34,9 @@ export const projectsData = [
     projectImage: 'https://i.ibb.co/mQbwFTB/7.png',
     githubRepository: 'https://github.com/Fedexhlz/zustand-repaso',
   },
+  {
+    projectName: 'Landing Page hecha en clases',
+    projectImage: 'https://i.ibb.co/rq0QVgj/8.png',
+    githubRepository: 'https://github.com/Yudi454/proyecto-tp2',
+  },
 ];
