@@ -26,8 +26,7 @@ const MainProjects = () => {
               <img
                 src={project.projectImage}
                 alt={project.projectName}
-                className='w-full h-74 object-cover'
-                // className='w-full h-64 object-cover'
+                className='w-full h-64 object-cover'
               />
               <div className='absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
                 <h3
