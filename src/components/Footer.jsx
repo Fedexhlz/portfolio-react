@@ -15,7 +15,7 @@ const Footer = () => {
       <div className='flex flex-col md:flex-row justify-center items-center gap-2 text-sm text-center'>
         <span className='flex items-center gap-1'>
           <FaRegCopyright />
-          2025 - Federico Herrera - Todos los derechos reservados -
+          2025 - Federico Herrera - Todos los derechos reservados - Mis Redes
         </span>
 
         <span className='flex gap-4 text-xl mt-1 md:mt-0'>
